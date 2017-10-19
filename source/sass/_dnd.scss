@@ -1,0 +1,64 @@
+
+/* Drag and drop */
+
+.drag-and-drop {
+
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+	background-color: $white;
+	outline: 2px dashed $lightBlue;
+	outline-offset: -10px;
+	padding: 15px;
+	min-height: 200px;
+	transform: $fastTransition;
+
+	i {
+
+		width: 100%;
+
+	}
+
+	label {
+
+		width: 100%;
+
+	}
+
+	.dropped-files {
+
+		display: inline;
+
+	}
+
+	.user-file {
+
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+
+		+ label {
+
+		    max-width: 80%;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    cursor: pointer;
+		    display: inline-block;
+		    overflow: hidden;
+
+		}
+
+	}
+
+}
+
+.is-dragover {
+
+	background-color: $lightBlue;
+	color: $white;
+
+}
