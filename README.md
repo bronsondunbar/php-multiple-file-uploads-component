@@ -4,6 +4,8 @@ This example creates a folder using the users name and uploads selected files. I
 
 It also includes Google reCAPTCHA to ensure there is no spam content created.
 
+Preview: http://bit.ly/2gwjTRD
+
 ## Steps
 
 In order for the example below to work you will need to use your own Google reCAPTCHA site &amp; private keys
