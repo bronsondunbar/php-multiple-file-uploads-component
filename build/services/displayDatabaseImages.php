@@ -7,7 +7,7 @@ $searchForImagesResults = $conn->query($searchForImages) or die(mysqli_error($co
 
 $numberOfImagesFound = mysqli_num_rows($searchForImagesResults);
 
-if ($searchForImagesResults > 0) {
+if ($numberOfImagesFound > 0) {
 
 	$getAllImages = "SELECT * FROM uploads";
 	$getAllImagesResults = $conn->query($getAllImages) or die(mysqli_error($conn));
