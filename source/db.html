@@ -33,8 +33,8 @@
       <header>
         <h1>Multiple file uploads</h1>
 
-        <div class="panel panel-default">
-          <div class="panel-body">
+        <div class="card">
+          <div class="card-body">
             <p>This example creates a folder using the users name and uploads selected files. It will also send the owner an email notification of all the uploads.</p>
 
             <p>It also includes Google reCAPTCHA to ensure there is no spam content created.</p>
@@ -42,61 +42,69 @@
         </div>
       </header>
 
-      <h2>Steps</h2>
+      <div class="card">
+        <div class="card-body">
+          <h2>Steps</h2>
 
-      <p>In order for the example below to work you will need to use your own Google reCAPTCHA site &amp; private keys</p>
+          <p>In order for the example below to work you will need to use your own Google reCAPTCHA site &amp; private keys</p>
 
-      <ol>
-        <li>Go to <a href="https://www.google.com/recaptcha/intro/">https://www.google.com/recaptcha/intro/</a></li>
-        <li>Click on the Get reCAPTCHA button</li>
-        <li>After logging in, you will need to register your site in order to get your keys.</li>
-        <li>Once you have done this, you can select your site and then click on the Keys section</li>
-        <li>This will give you both your site &amp; private keys</li>
-        <li>In index.html, you can search for SITE_KEY and replace it with your key</li>
-        <li>In create.php, you can search for PRIVATE_KEY and replace it with your key</li>
-        <li>Once this has been done, you can upload the files your site and test. Keep in mind you need to upload the files to the same site you added in Google reCAPTCHA</li>
-      </ol>
+          <ol>
+            <li>Go to <a href="https://www.google.com/recaptcha/intro/">https://www.google.com/recaptcha/intro/</a></li>
+            <li>Click on the Get reCAPTCHA button</li>
+            <li>After logging in, you will need to register your site in order to get your keys.</li>
+            <li>Once you have done this, you can select your site and then click on the Keys section</li>
+            <li>This will give you both your site &amp; private keys</li>
+            <li>In index.html, you can search for SITE_KEY and replace it with your key</li>
+            <li>In create.php, you can search for PRIVATE_KEY and replace it with your key</li>
+            <li>Once this has been done, you can upload the files your site and test. Keep in mind you need to upload the files to the same site you added in Google reCAPTCHA</li>
+          </ol>
+        </div>
+      </div>
 
-      <h2>Database Example</h2>
+      <div class="card">
+        <div class="card-body">
+          <h2>Database Example</h2>
 
-        <p><a href="index.html">Click here</a> to view the server example</p>
+          <p><a href="index.html">Click here</a> to view the server example</p>
 
-        <form name="form" id="database" method="POST" action="#" enctype="multipart/form-data">
-          <label for="name">What is your name?</label>
-          <input id="name" name="name" placeholder="John Doe" type="text">
+          <form name="form" id="database" method="POST" action="#" enctype="multipart/form-data">
+            <label for="name">What is your name?</label>
+            <input id="name" name="name" placeholder="John Doe" type="text">
 
-          <label for="email">What is your email address?</label>
-          <input id="email" name="email" placeholder="john@doe.com" type="email">
+            <label for="email">What is your email address?</label>
+            <input id="email" name="email" placeholder="john@doe.com" type="email">
 
-          <label for="files">Please select the files you want to upload:</label>
+            <label for="files">Please select the files you want to upload:</label>
 
-          <small>
-            Accepted files: jpeg, jpg, png.
-            <br />
-            A maxium of 20 files at a time is allowed.
-            <br />
-            Maximum file size is 5Mb.
-            <br />
-            Recommended dimensions for images is 500 x 500 pixels.
-          </small>
+            <small>
+              Accepted files: jpeg, jpg, png.
+              <br />
+              A maxium of 20 files at a time is allowed.
+              <br />
+              Maximum file size is 5Mb.
+              <br />
+              Recommended dimensions for images is 500 x 500 pixels.
+            </small>
 
-          <div class="drag-and-drop">
-            <div>
-              <i class="fa fa-3x fa-cloud-upload" aria-hidden="true"></i>
+            <div class="drag-and-drop">
+              <div>
+                <i class="fas fa-3x fa-cloud-upload-alt" aria-hidden="true"></i>
 
-              <input class="user-file" data-multiple-caption="{count} files selected" id="userDatabaseUpload" name="files[]" type="file" accept="image/x-png, image/jpeg" multiple="multiple" />
-              <label for="userDatabaseUpload"><strong>Choose a file</strong><span class="dropped-files"> or drag it here</span>.</label>
+                <input class="user-file" data-multiple-caption="{count} files selected" id="userDatabaseUpload" name="files[]" type="file" accept="image/x-png, image/jpeg" multiple="multiple" />
+                <label for="userDatabaseUpload"><strong>Choose a file</strong><span class="dropped-files"> or drag it here</span>.</label>
+              </div>
             </div>
-          </div>
 
-          <div class="g-recaptcha" data-sitekey="SITE_KEY"></div>
-          <script src='https://www.google.com/recaptcha/api.js'></script>
+            <div class="g-recaptcha" data-sitekey="SITE_KEY"></div>
+            <script src='https://www.google.com/recaptcha/api.js'></script>
 
-          <input id="submitForm" name="submit" type="submit" class="btn btn-lg btn-default" value="Upload to database">
-          <a href="#" class="btn btn-lg btn-default" id="displayDatabaseImages">Display uploaded images</a>
-        </form>
+            <button id="submitForm" name="submit" type="submit" class="btn btn-default">Upload to database</button>
+            <a href="#" class="btn btn-default" id="displayDatabaseImages">Display uploaded images</a>
+          </form>
 
-        <div class="grid" id="databaseImages"></div>
+          <div class="grid" id="databaseImages"></div>
+        </div>
+      </div>
 
     </div>
 
