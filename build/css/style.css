@@ -7794,7 +7794,9 @@ figure figcaption {
   min-height: 200px;
   -webkit-transform: all 0.3s;
           transform: all 0.3s; }
-  .drag-and-drop i {
+  .drag-and-drop i, .drag-and-drop svg {
+    display: block;
+    margin: 0 auto;
     width: 100%; }
   .drag-and-drop label {
     width: 100%; }
