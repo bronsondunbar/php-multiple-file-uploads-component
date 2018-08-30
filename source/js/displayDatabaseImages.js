@@ -17,7 +17,7 @@ $("#displayDatabaseImages").click(function (event) {
             scrollTop: 0
         }, "fast");
 
-        $(".loader").fadeIn();
+        $(".loader").css("visibility", "visible");
         $("body").css("overflow", "hidden");
       },
 
@@ -39,7 +39,7 @@ $("#displayDatabaseImages").click(function (event) {
 
         }
 
-        $(".loader").fadeOut();
+        $(".loader").css("visibility", "hidden");
         $("body").css("overflow", "scroll");
 
       }

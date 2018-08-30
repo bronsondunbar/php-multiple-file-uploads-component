@@ -85,7 +85,7 @@ $(document).ready(function () {
             scrollTop: 0
         }, "fast");
 
-        $(".loader").fadeIn();
+        $(".loader").css("visibility", "visible");
         $("body").css("overflow", "hidden");
       },
 
@@ -142,7 +142,7 @@ $(document).ready(function () {
 
         }
 
-        $(".loader").fadeOut();
+        $(".loader").css("visibility", "hidden");
         $("body").css("overflow", "scroll");
 
       }
